@@ -8,7 +8,7 @@ class TopicsController < ApplicationController
     authorize! :create, @topic, message: "You need to be an admin to do that."
   end
 
-  def show
+  def showhell
     @topic = Topic.find(params[:id])
     @posts = @topic.posts
   end
