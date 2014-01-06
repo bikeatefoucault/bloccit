@@ -15,3 +15,6 @@
 /tmp
 
 /app/assets/stylesheets/application.css
+
+# Ignore application configuration
+/config/application.yml
