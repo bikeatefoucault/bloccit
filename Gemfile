@@ -33,6 +33,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
 gem 'figaro'
+gem 'atomic'
 gem 'rails_12factor', group: :production
 
 # To use ActiveModel has_secure_password
