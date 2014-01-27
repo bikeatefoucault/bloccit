@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build(params[:comment])
     @comment.post = @post
     
+    authorize! :create, @comment, message: "You need be signed in to do that."
     if @comment.save
       flash[:notice] = "Comment was created."
       redirect_to [@topic, @post]
@@ -20,7 +21,7 @@ class CommentsController < ApplicationController
   def destroy
     @topic = Topic.find(params[:topic_id])
     @post = @topic.posts.find(params[:post_id])
-    @comment = @post.comments.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
 
     authorize! :destroy, @comment, message: "You need to own the comment to delete it."
       if @comment.destroy
