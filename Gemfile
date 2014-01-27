@@ -35,6 +35,7 @@ gem 'fog'
 gem 'figaro'
 gem 'atomic'
 gem 'will_paginate', '~> 3.0'
+gem 'foreigner'
 gem 'rails_12factor', group: :production
 
 # To use ActiveModel has_secure_password
